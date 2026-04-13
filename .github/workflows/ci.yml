@@ -18,3 +18,13 @@ jobs:
 
       - name: Run Python file
         run: python app.py
+
+      # 🔽 NEW (Terraform starts here)
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Plan
+        run: terraform plan
